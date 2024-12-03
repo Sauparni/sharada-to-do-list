@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Todo App</h1>
+
+        <!-- Authentication Section -->
+        <div id="auth-section">
+            <div id="login-section">
+                <input type="text" id="username" class="input-field" placeholder="Username">
+                <input type="password" id="password" class="input-field" placeholder="Password">
+                <button class="btn" id="login-btn">Login</button>
+                <button class="btn" id="signup-btn">Sign Up</button>
+            </div>
+
+            <!-- Todo List Section -->
+            <div id="todo-section" style="display: none;">
+                <button class="toggle-btn" id="dark-mode-toggle">Toggle Dark Mode</button>
+                <h2>Welcome, <span id="welcome-user"></span></h2>
+                <div class="categories">
+                    <button class="category-btn" onclick="filterTasks('Work')">Work</button>
+                    <button class="category-btn" onclick="filterTasks('Personal')">Personal</button>
+                    <button class="category-btn" onclick="filterTasks('Shopping')">Shopping</button>
+                </div>
+                <input type="text" id="task-title" class="input-field" placeholder="New Task">
+                <input type="datetime-local" id="reminder-time" class="input-field">
+                <select id="priority-select" class="input-field">
+                    <option value="low">Low Priority</option>
+                    <option value="medium">Medium Priority</option>
+                    <option value="high">High Priority</option>
+                </select>
+                <button class="btn" id="add-task-btn">Add Task</button>
+                <div id="task-list" class="todo-list"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
